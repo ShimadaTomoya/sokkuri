@@ -10,12 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171003134105) do
+ActiveRecord::Schema.define(version: 20171004173638) do
 
   create_table "celebrities", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "couples", force: :cascade do |t|
+    t.integer "celebrity1_id"
+    t.integer "celebrity2_id"
+    t.string "niteru_votes", default: "0"
+    t.string "nitenai_votes", default: "0"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["celebrity1_id"], name: "index_couples_on_celebrity1_id"
+    t.index ["celebrity2_id"], name: "index_couples_on_celebrity2_id"
   end
 
 end

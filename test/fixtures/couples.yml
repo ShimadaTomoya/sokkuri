@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  celebrity1: one
+  celebrity2: one
+  niteru_votes: MyString
+  nitenai_votes: MyString
+
+two:
+  celebrity1: two
+  celebrity2: two
+  niteru_votes: MyString
+  nitenai_votes: MyString
