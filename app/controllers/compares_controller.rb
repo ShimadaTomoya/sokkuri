@@ -3,6 +3,7 @@ class ComparesController < ApplicationController
   end
 
   def show
+    @couple = Couple.find(params[:id])
   end
 
   def new
