@@ -1,0 +1,12 @@
+<h1>PostCouple#new</h1>
+<p>Find me in app/views/post_couple/new.html.erb</p>
+</center>
+<%= form_tag post_couple_index_path do %>
+<div class="form-group">
+    <%= text_field :celebrity1, :name1 , class: "form-control" %>
+    <%= text_field :celebrity2, :name2 , class: "form-control" %>
+</div>
+  <div class="btn-group" role="group">
+    <%= submit_tag '似てると思う！', class: 'btn btn-primary btn-lg' %>
+  </div>
+<% end %>
