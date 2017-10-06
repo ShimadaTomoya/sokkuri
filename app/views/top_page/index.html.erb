@@ -1,3 +1,4 @@
 <% @couples.each do |cp| %>
 <h1><%= link_to "#{cp.celebrity1.name}さん　と #{cp.celebrity2.name}さん", controller: "compares", action: "show" , id: cp.id %></h1></br>
 <% end %>
+<%= link_to '投稿！' ,post_couple_new_path , class: 'btn btn-primary btn-lg'%>
