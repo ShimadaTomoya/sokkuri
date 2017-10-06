@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  root to: 'top_page#index'
+
+  get 'top_page/index'
+
+  get 'top_page/show'
+
   get 'compares/index'
 
   get 'compares/show'
