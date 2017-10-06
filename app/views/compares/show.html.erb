@@ -1,0 +1,15 @@
+<h1><%= @couple.celebrity1.name %>　さん　と<%= @couple.celebrity2.name %>さん</h1>
+<div>
+  この二人はそっくりだと思う？
+  投票するとこれまでの得票数を見ることができます
+</div>
+<%= form_for @couple, url: compare_path(:update) do |f| %>
+<div class="btn-group btn-group-justified" role="group" aria-label="...">
+  <div class="btn-group" role="group">
+    <%= f.submit '似てる！', class: 'btn btn-lg btn-danger' %>
+  </div>
+  <div class="btn-group" role="group">
+    <%= f.submit '似てない・・・', class: 'btn btn-primary btn-lg' %>
+  </div>
+</div>
+<% end %>
