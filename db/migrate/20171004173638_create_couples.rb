@@ -3,8 +3,8 @@ class CreateCouples < ActiveRecord::Migration[5.1]
     create_table :couples do |t|
       t.references :celebrity1
       t.references :celebrity2
-      t.string :niteru_votes, default: 0
-      t.string :nitenai_votes, default: 0
+      t.integer :niteru_votes, default: 0
+      t.integer :nitenai_votes, default: 0
 
       t.timestamps
     end

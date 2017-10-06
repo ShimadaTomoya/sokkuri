@@ -16,6 +16,9 @@ class ComparesController < ApplicationController
   end
 
   def update
+    @couple = Couple.find(params[:id])
+    params[:commit] == "似てる！" ? @couple.niteru_votes += 1 : @couple.nitenai_votes += 1
+    @couple.save
   end
 
   def destroy

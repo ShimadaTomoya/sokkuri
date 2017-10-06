@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20171004173638) do
   create_table "couples", force: :cascade do |t|
     t.integer "celebrity1_id"
     t.integer "celebrity2_id"
-    t.string "niteru_votes", default: "0"
-    t.string "nitenai_votes", default: "0"
+    t.integer "niteru_votes", default: 0
+    t.integer "nitenai_votes", default: 0
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["celebrity1_id"], name: "index_couples_on_celebrity1_id"
